@@ -1,3 +1,23 @@
 # text-mining
 
 Please read the [instructions](instructions.md).
+
+1)PROJECT OVERVIEW:
+For this assignment, I decided to use Project Gutenburg as my data source and analyzed two philosophy books from it. I decided to use the books, "The Prince" by Niccolo Machiavelli and “The Republic” by Plato. I love philosophy and have read the books. I believe there are some similarities in the ideas of an ideal leader presented in both books and wanted to write some code that supports my hypothesis. I really struggled with this assignment and was not able to do everything I planned to do. I started with cleaning the data as the data had a lot of whitespaces and unnecessary punctuation that would hinder my analysis. I divided my analysis into two parts which were individual analysis and combined analysis. For individual analysis, I found the total number of words, frequency of each unique word, 10 most used words, and 10 least used words for each book. For combined analysis, I found out the similarity and sentiment analysis of both books. I also wanted to remove the 1000 most common words used in English and conduct my analysis again but was not able to implement that. 
+
+2)IMPLEMENTATION:
+Initially, I was struggling to come up with an idea for this project as I was just toying around the Awesome Public Datasets and most of the ones I was interested in were focused on numerical data and I wanted more text-heavy data. I decided to choose a topic I am passionate about and find some information on that topic and that’s how I ended up choosing the two philosophy books. 
+
+Logically, it made sense to clean the data and I made a function that does that. I tried to remove the punctuation first through nested loops manually but when that did not work and a few other things did not work I had to resort to the internet to find a solution. I also made the texts lowercase. I was not able to remove the beginning and end and headers of the texts. The function word_count() does my complete individual analysis and text_similarity() and sentiment_analysis() do my combined analysis. I decided to do my complete individual analysis in word_count() as surprisingly individual functions for each element of it were becoming very confusing. 
+
+While doing the text-similarity analysis I struggled the most as the code the professor gave was not working for me. I was not able to do find the Levenshtein Distance and had to resort to using the inbuilt SequenceMatcher to do it. I tried using and installing many libraries that allow calculating the Levenshtein Distance but none of them worked. I also was not able to redo my complete analysis without the 1000 most used words in English. I tried using the NLTK library and even the stopwords from its Corpus but that did not work. I was able to make a text file with the 1000 most used words but was not able to use it in my code. 
+
+
+3)RESULTS:
+I am happy to an extent with what I was able to come up with. I found out that 8 of the words from the 10 most used in both the texts were the same. While it was mostly articles I thought there would be around 5-6 same and not 8. The similarity report between the two texts was around 2 percent. With so many same articles I had no idea why the similarity percentage was so low. I was not able to find the Levenshtein Distance so perhaps because of that. 
+
+The sentient analysis also supported my hypothesis that both texts had similar ideas as they both received a score around 75% being neutral. This was very fascinating to me because Plato wrote his book in 375 BC and Machiavelli wrote his book in 1532. Still, both books were very neutral. Plato's book was a little more positive due to the fact that Machiavelli was an active statesman and had to live in times of war. 
+
+
+4)REFLECTIONS:
+I was cosntantly trying to find a balance between Googling things that did not work and trying to solve it myself. I spent way too much time than what was required in this project and still was not able to achieve everything I wanted to achieve. Next time, I will make a game plan early on and take professor's help in going about my tasks. I will not spend so much time working on something I do not understand. I will give appropriate time to solve problems and if i am not able to come up with a solution I will just Google the soltuion. I feel I was able to learn a lot from this project especially cleaning the data and working with different datasets and Api's. 
